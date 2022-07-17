@@ -2,19 +2,46 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Buscador de serie de Anime</title>
   </head>
-
   <body>
-    <div class="page">
-      <include src="./partials/header.html" title="Bienvenidos a Adalab"></include>
-      <include src="./partials/main.html"></include>
-      <include src="./partials/footer.html"></include>
-    </div>
-    <script src="./assets/js/main.js"></script>
+    <main>
+      <h1>Buscador de series de <span>anime</span></h1>
+      <form action="">
+        <label for="titleAnime">
+          <input
+            type="text"
+            class="js_inputUser"
+            name="titleAnime"
+            id="titleAnime"
+            placeholder="Ej: My Hero Academia"
+          />
+        </label>
+        <label for="search">
+          <input
+            type="button"
+            class="js_btnSearch"
+            value="Buscar"
+            name="search"
+            id="search"
+          />
+        </label>
+        <button class="js_btnReset">Reset</button>
+      </form>
+      <section class="favorites">
+        <h3>Favoritos</h3>
+        <ul class="js_listFavorites"></ul>
+      </section>
+
+      <section class="results">
+        <h3>Resultados</h3>
+        <ul class="js_listResults"></ul>
+      </section>
+    </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
