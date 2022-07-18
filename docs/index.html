@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9a646766b9.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Buscador de serie de Anime</title>
   </head>
   <body>
-    <main>
-      <h1>Buscador de series de <span>anime</span></h1>
-      <form action="">
+    <main class="main">
+      <h1 class="main__title">Buscador de series de <span>anime</span></h1>
+      <form action="" class="main__form">
         <label for="titleAnime">
           <input
             type="text"
-            class="js_inputUser"
+            class="inputUser js_inputUser"
             name="titleAnime"
             id="titleAnime"
             placeholder="Ej: My Hero Academia"
@@ -29,17 +33,19 @@
             id="search"
           />
         </label>
-        <button class="js_btnReset">Reset</button>
+        <button class="main__buttonReset js_btnReset">Reset</button>
       </form>
-      <section class="favorites">
-        <h3>Favoritos</h3>
-        <ul class="js_listFavourites"></ul>
-      </section>
+      <div class="main__resAndFav">
+        <section class="favorites">
+          <h3 class="titleFav">Favoritos</h3>
+          <ul class="ulFavorites js_listFavourites"></ul>
+        </section>
 
-      <section class="results">
-        <h3>Resultados</h3>
-        <ul class="js_listResults"></ul>
-      </section>
+        <section class="results">
+          <h3 class="titleResults">Resultados</h3>
+          <ul class="ulResults js_listResults"></ul>
+        </section>
+      </div>
     </main>
 
     <script src="./assets/js/main.js"></script>

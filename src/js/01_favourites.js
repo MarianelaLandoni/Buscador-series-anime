@@ -7,19 +7,17 @@
 function renderFavourites() {
   let html = '';
   for (const eachfav of favouritesAnime) {
+    html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} ">`;
+    html += `<h3>${eachfav.title}</h3>`;
     if (
       eachfav.images.jpg.image_url ===
       'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
     ) {
-      html += `<li class="listAnime js_eachAnime" id="${eachfav.mal_id} ">
-        <h3>${eachfav.title}</h3>
-        <img class="imgAnime" src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>
-        <i class="fa-solid fa-circle-xmark id="eliminateFav"></i>
-        </li>`;
+      html += ` <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>`;
     } else {
-      html += `<li class="listAnime js_eachAnime" id="${eachfav.mal_id} "><h3>${eachfav.title}</h3><img class="imgAnime" src=${eachfav.images.jpg.image_url}>
-      <i class="fa-solid fa-circle-xmark id="eliminateFav"></i></li>`;
+      html += `<img class="imgAnime" src=${eachfav.images.jpg.image_url}>`;
     }
+    html += `</li>`;
   }
   listFavourites.innerHTML = html;
 }

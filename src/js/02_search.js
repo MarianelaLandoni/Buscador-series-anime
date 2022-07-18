@@ -15,19 +15,18 @@ function renderAnime() {
     } else {
       classFavourite = '';
     }
+
+    html += `<li class="listAnime ${classFavourite} js_eachAnime" id="${elementAnime.mal_id} ">`;
+    html += `<h3>${elementAnime.title}</h3>`;
     if (
       elementAnime.images.jpg.image_url ===
       'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
     ) {
-      html += `<li class="listAnime ${classFavourite} js_eachAnime" id="${elementAnime.mal_id} ">
-        <h3>${elementAnime.title}</h3>
-        <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>
-        <i class="fa-solid fa-circle-xmark id="eliminateFav"></i>
-        </li>`;
+      html += ` <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>`;
     } else {
-      html += `<li class="listAnime ${classFavourite} js_eachAnime" id="${elementAnime.mal_id} "><h3>${elementAnime.title}</h3><img class="imgAnime" src=${elementAnime.images.jpg.image_url}>
-        <i class="fa-solid fa-circle-xmark id="eliminateFav"></i></li>`;
+      html += `<img class="imgAnime" src=${elementAnime.images.jpg.image_url}>`;
     }
+    html += `</li>`;
   }
 
   listResults.innerHTML = html;
