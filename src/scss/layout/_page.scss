@@ -1,6 +1,56 @@
-.selected {
+.main {
+    height: 100%;
+    background-color: rgb(158, 156, 156);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__resAndFav{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+        .favorites{
+            margin: 30px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .results{
+            margin: 30px;
+            width: 50%;
+            text-align: center;
+        }
+        .listAnime{
+            list-style: none;
+        }
         
-    border: solid 2px red;
-    background-color:blue;
-  
+        .imgAnime{
+            width: 150px;
+            height: 200px;
+            border-radius: 8px;
+        }
+        
+
+    
+    }
+
+}   
+
+.selected{
+    border: black 5px solid;
 }
+
+
+
+
+
+
+
+
+
+
+
+

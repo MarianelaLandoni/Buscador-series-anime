@@ -16,18 +16,18 @@ function renderAnime() {
       classFavourite = '';
     }
     if (
-        elementAnime.images.jpg.image_url ===
-        'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
-      ) {
-        html += `<li class=" js_eachAnime" id="${elementAnime.mal_id} ">
+      elementAnime.images.jpg.image_url ===
+      'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
+    ) {
+      html += `<li class="listAnime ${classFavourite} js_eachAnime" id="${elementAnime.mal_id} ">
         <h3>${elementAnime.title}</h3>
-        <img src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>
+        <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>
         <i class="fa-solid fa-circle-xmark id="eliminateFav"></i>
         </li>`;
-      } else {
-        html += `<li class=" js_eachAnime" id="${elementAnime.mal_id} "><h3>${elementAnime.title}</h3><img src=${elementAnime.images.jpg.image_url}>
+    } else {
+      html += `<li class="listAnime ${classFavourite} js_eachAnime" id="${elementAnime.mal_id} "><h3>${elementAnime.title}</h3><img class="imgAnime" src=${elementAnime.images.jpg.image_url}>
         <i class="fa-solid fa-circle-xmark id="eliminateFav"></i></li>`;
-      }
+    }
   }
 
   listResults.innerHTML = html;
@@ -42,6 +42,7 @@ function getAnimeData() {
     .then((response) => response.json())
     .then((data) => {
       dataAnime = data.data;
+      localStorage.setItem('data', JSON.stringify(favouritesAnime));
       renderAnime(); //lo que va despues del . (.data)es lo que ponga en el API, aquí si vemos el JSON todos los datos están metidos dentro de "data"
     });
 }
