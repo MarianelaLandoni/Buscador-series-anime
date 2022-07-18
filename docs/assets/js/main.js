@@ -1,1 +1,1 @@
-"use strict";console.log(">> Ready :)");
+"use strict";const inputUser=document.querySelector(".js_inputUser"),btnSearch=document.querySelector(".js_btnSearch"),btnReset=document.querySelector(".js_btnReset"),listResults=document.querySelector(".js_listResults"),listFavorites=document.querySelector(".js_listFavorites");
