@@ -31,9 +31,9 @@ function renderFavourites() {
 //Función manejadora del click de cada li. Para saber la informacion de cada click que hago tengo que hacer un currentTarget. Para diferenciar cada li tengo que utilizar el id
 
 function handleClickFavourite(event) {
-  console.log(event.currentTarget.id);
+  // console.log(event.currentTarget.id);
   const selectedId = parseInt(event.currentTarget.id);
-  console.log(selectedId);
+  //console.log(selectedId);
 
   const foundAnime = dataAnime.find(
     (eachAnime) => eachAnime.mal_id === selectedId
@@ -48,7 +48,7 @@ function handleClickFavourite(event) {
     favouritesAnime.splice(favouritesAnimeFound, 1);
   }
 
-  console.log(favouritesAnime);
+  // console.log(favouritesAnime);
 
   renderFavourites();
   listenerAnimes();
