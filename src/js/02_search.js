@@ -14,7 +14,7 @@ function renderAnime() {
     //   classFavourite = 'selected';
     // } else {
     //   classFavourite = '';
-    // }
+    // } Esto no me funciona, pruebo con classList
 
     if (
       elementAnime.images.jpg.image_url ===
