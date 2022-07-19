@@ -1,4 +1,4 @@
-#BUSCADOR DE SERIES DE ANIME
+# BUSCADOR DE SERIES DE ANIME
 
 El objetivo al construir esta página ha sido desarrollar una aplicación web de búsqueda de series de anime, que nos permite
 des/marcar las series como favoritas y guardarlas.
@@ -16,7 +16,7 @@ Si quieres **ver el código y jugar con él** tienes que:
 
 Si solamente **quieres ver la página**, clica en el siguiente enlace: http://beta.adalab.es/modulo-2-evaluacion-final-MarianelaLandoni/
 
-## 2.Tecnologías utilizadas
+### 2.Tecnologías utilizadas
 
 - Visual Studio Node Version: May 2022
 - Git Version: 2.17.1
