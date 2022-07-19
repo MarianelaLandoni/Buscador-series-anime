@@ -20,9 +20,9 @@ function renderAnime() {
       elementAnime.images.jpg.image_url ===
       'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
     ) {
-      html += ` <li class="listAnime js_eachAnime " id="${elementAnime.mal_id} "><h3>${elementAnime.title}</h3><img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'></li>`;
+      html += ` <li class="listAnime js_eachAnime " id="${elementAnime.mal_id} "><img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'><h3 class="titleAnime">${elementAnime.title}</h3></li>`;
     } else {
-      html += `<li class="listAnime js_eachAnime " id="${elementAnime.mal_id} "><h3>${elementAnime.title}</h3><img class="imgAnime" src=${elementAnime.images.jpg.image_url}></li>`;
+      html += `<li class="listAnime js_eachAnime " id="${elementAnime.mal_id} "><img class="imgAnime" src=${elementAnime.images.jpg.image_url}><h3 class="titleAnime">${elementAnime.title}</h3></li>`;
     }
   }
 
