@@ -1,7 +1,5 @@
 'use strict';
 
-//PARTE - PONER FAVORITOS
-
 //Función que pinta la lista de favoritos
 
 function renderFavourites() {
@@ -16,11 +14,11 @@ function renderFavourites() {
       html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} "><img class="imgAnime" src=${eachfav.images.jpg.image_url}><h3 class="titleAnime">${eachfav.title}</h3></li>`;
     }
   }
-  localStorage.setItem('data', JSON.stringify(favouritesAnime)); //Si lo pongo dentro de esta función sí los guarda todos
+  localStorage.setItem('data', JSON.stringify(favouritesAnime));
   listFavourites.innerHTML = html;
 }
 
-//Función manejadora del click de cada li. Para saber la informacion de cada click que hago tengo que hacer un currentTarget. Para diferenciar cada li tengo que utilizar el id
+//Función manejadora del click de cada li
 
 function handleClickFavourite(event) {
   const animeSelected = event.currentTarget;
@@ -43,15 +41,14 @@ function handleClickFavourite(event) {
     animeSelected.classList.remove('selected');
   }
 
-  // console.log(favouritesAnime);
-
   renderFavourites();
   listenerAnimes();
 }
 
-//Funcion escuchadora de cada li. La voy a llamar una vez que se han pintado los elementos, dentro del renderizado, dentro de renderAnime."Pinto y escucho"
+//Funcion escuchadora de cada li
+
 function listenerAnimes() {
-  const selectAllLiAnimes = document.querySelectorAll('.js_eachAnime'); //no se puede poner como una variable global porque cuando carga la página dará un array vacío.
+  const selectAllLiAnimes = document.querySelectorAll('.js_eachAnime');
   for (const li of selectAllLiAnimes) {
     li.addEventListener('click', handleClickFavourite);
   }
