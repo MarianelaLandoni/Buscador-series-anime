@@ -7,3 +7,13 @@ function handleClickReset() {
 }
 
 btnReset.addEventListener('click', handleClickReset);
+
+//Evento para elminar toda la lista de favoritos
+
+function handleResetAllFavs() {
+  localStorage.clear();
+  listFavourites.innerHTML = '';
+  favouritesAnime = [];
+}
+
+resetAllFavs.addEventListener('click', handleResetAllFavs);

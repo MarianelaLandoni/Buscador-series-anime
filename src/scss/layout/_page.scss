@@ -1,5 +1,7 @@
 .body{
     background-color: rgb(43, 42, 42);
+    font-family: 'Edu SA Beginner', sans-serif;
+    
 }
 
 .main {
@@ -11,7 +13,6 @@
     padding-left: 40px;
     padding-top: 40px;
     text-align: start;
-    font-family: 'Edu SA Beginner', sans-serif;
     
     &__title{
         color: aquamarine;
@@ -82,6 +83,18 @@
             padding-bottom: 10px;
             
         }
+
+        .resetAllFavs{
+            border: none;
+            width: 160px;
+            height: 40px;
+            background-color: rgb(255, 0, 128);;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
         .results{
             margin: 30px;
             width: 70%;
@@ -113,12 +126,12 @@
 
        .ulResults{
         display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
        }
 
        .ulFavorites{
         display: grid;
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
        }
         
     }
