@@ -9,7 +9,6 @@ function onLoad() {
     renderFavourites();
     console.log('usa LS');
   } else {
-    //getAnimeData();
     console.log('no estoy en el LS');
   }
 }
