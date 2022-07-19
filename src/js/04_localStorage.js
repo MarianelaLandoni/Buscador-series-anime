@@ -15,4 +15,4 @@ function onLoad() {
 }
 
 //getAnimeData(); //no lo pongo porque no quiero que me recarge todos los resultados al cargar la página
-onLoad(); //No guarda el último seleccionado como favorito
+onLoad();

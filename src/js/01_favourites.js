@@ -7,27 +7,26 @@
 function renderFavourites() {
   let html = '';
   for (const eachfav of favouritesAnime) {
-    html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} ">`;
-    html += `<h3>${eachfav.title}</h3>`;
     if (
       eachfav.images.jpg.image_url ===
       'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'
     ) {
-      html += ` <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'>`;
+      html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} "><h3>${eachfav.title}</h3> <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'></li>`;
     } else {
-      html += `<img class="imgAnime" src=${eachfav.images.jpg.image_url}>`;
+      html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} "><h3>${eachfav.title}</h3><img class="imgAnime" src=${eachfav.images.jpg.image_url}></li>`;
     }
-    html += `</li>`;
   }
+  localStorage.setItem('data', JSON.stringify(favouritesAnime)); //Si lo pongo dentro de esta función sí los guarda todos
   listFavourites.innerHTML = html;
 }
 
 //Función manejadora del click de cada li. Para saber la informacion de cada click que hago tengo que hacer un currentTarget. Para diferenciar cada li tengo que utilizar el id
 
 function handleClickFavourite(event) {
-  // console.log(event.currentTarget.id);
+  const animeSelected = event.currentTarget;
+  console.log(animeSelected);
   const selectedId = parseInt(event.currentTarget.id);
-  //console.log(selectedId);
+  console.log(selectedId);
 
   const foundAnime = dataAnime.find(
     (eachAnime) => eachAnime.mal_id === selectedId
@@ -38,8 +37,10 @@ function handleClickFavourite(event) {
   );
   if (favouritesAnimeFound === -1) {
     favouritesAnime.push(foundAnime);
+    animeSelected.classList.add('selected');
   } else {
     favouritesAnime.splice(favouritesAnimeFound, 1);
+    animeSelected.classList.remove('selected');
   }
 
   // console.log(favouritesAnime);

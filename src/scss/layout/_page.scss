@@ -22,10 +22,11 @@
         .results{
             margin: 30px;
             width: 50%;
-            text-align: center;
+        
         }
         .listAnime{
             list-style: none;
+            margin: 20px;
         }
         
         .imgAnime{
@@ -40,8 +41,13 @@
 
 }   
 
-.selected img{
+.selected {
+    color: black;
     border: black 5px solid;
+    width: 170px;
+    height: 260px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 
