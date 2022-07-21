@@ -11,7 +11,7 @@ function renderFavourites() {
     ) {
       html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} "> <img class="imgAnime"  src='https://via.placeholder.com/210x295/ffffff/666666/?text=TV'><h3 class="titleAnime">${eachfav.title}</h3></li>`;
     } else {
-      html += `<li class="listAnime  js_eachAnime" id="${eachfav.mal_id} "><img class="imgAnime" src=${eachfav.images.jpg.image_url}><h3 class="titleAnime">${eachfav.title}</h3></li>`;
+      html += `<li class="listAnime  js_eachAnimeFav js_printTitle " id="${eachfav.mal_id} "><img class="imgAnime" src=${eachfav.images.jpg.image_url}><h3 class="titleAnime">${eachfav.title}</h3></li>`;
     }
   }
   localStorage.setItem('data', JSON.stringify(favouritesAnime));
@@ -43,6 +43,7 @@ function handleClickFavourite(event) {
 
   renderFavourites();
   listenerAnimes();
+  listenerFavs();
 }
 
 //Funcion escuchadora de cada li
@@ -51,5 +52,20 @@ function listenerAnimes() {
   const selectAllLiAnimes = document.querySelectorAll('.js_eachAnime');
   for (const li of selectAllLiAnimes) {
     li.addEventListener('click', handleClickFavourite);
+  }
+}
+
+function handleClickFavTitle() {
+  const selectedFavId = parseInt(event.currentTarget.id);
+  const foundFav = favouritesAnime.find(
+    (item) => item.mal_id === selectedFavId
+  );
+  console.log(foundFav.title);
+}
+
+function listenerFavs() {
+  const selectFavs = document.querySelectorAll('.js_printTitle');
+  for (const eachFav of selectFavs) {
+    eachFav.addEventListener('click', handleClickFavTitle);
   }
 }

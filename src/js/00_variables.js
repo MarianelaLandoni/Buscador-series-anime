@@ -7,6 +7,7 @@ const btnReset = document.querySelector('.js_btnReset');
 const listResults = document.querySelector('.js_listResults');
 const listFavourites = document.querySelector('.js_listFavourites');
 const resetAllFavs = document.querySelector('.js_resetAllFavs');
+
 //Array para guardar los datos de búsqueda de la usuaria
 
 let dataAnime = [];
