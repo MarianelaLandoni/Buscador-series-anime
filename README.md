@@ -14,7 +14,7 @@ Si quieres **ver el código y jugar con él** tienes que:
 
 - Empezar con el comando _npm start_
 
-Si solamente **quieres ver la página**, clica en el siguiente enlace: http://beta.adalab.es/modulo-2-evaluacion-final-MarianelaLandoni/
+Si solamente **quieres ver la página**, clica en el siguiente enlace: https://marianelalandoni.github.io/Buscador-series-anime/
 
 ### 2.Tecnologías utilizadas
 
