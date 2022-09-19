@@ -8,7 +8,7 @@ des/marcar las series como favoritas y guardarlas.
 Si quieres **ver el código y jugar con él** tienes que:
 
 - Clonarte el repositorio en tu ordenador mediante el comando git clone y copiar la url:
-  _git clone https://github.com/Adalab/modulo-2-evaluacion-final-MarianelaLandoni.git_
+  _git clone https://github.com/MarianelaLandoni/Buscador-series-anime.git
 
 - Instalar mediante el comando _npm install_
 
